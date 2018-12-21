@@ -161,3 +161,8 @@ for room in rooms.values():
 
 print("Part 1:", max_dist)
 print("Part 2:", part2_count)
+
+f = open("day20.txt", "w")
+for room in rooms.values():
+  f.write("%i %i %i %s\n" % (room.x, room.y, room.distance, "".join(room.exits)))
+f.close()
